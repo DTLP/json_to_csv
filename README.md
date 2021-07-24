@@ -1,11 +1,11 @@
 # json_to_csv
-Converting JSON files into CSV
+Converting JSON files to CSV
 
-**Requirements:**  
+## Requirements: ##  
 pandas            1.0.5
 
-**How to:**  
-***Simple JSON:***  
+## How to: ## 
+### Simple JSON: ###  
 With simple JSON when the whole file consists of one array like the example below, you can use the following command to run the script:
 ```
 py.exe .\json_to_csv.py --in .\file.json --out .\file.csv
@@ -43,7 +43,7 @@ name | sirname | age | fav_things_food | fav_things_number | fav_things_sport
 John | Doe | 33 | Pizza | 13 | Football
 Jack | Mc'Donald | 26 | Fish and chips | 7 | Tennis, Basketball
 
-***Complex JSON:***  
+### Complex JSON: ### 
 
 With complex JSON structure where you might have other arrays or data you don't want to put in the CSV, you can 
 specify the name of the array containing only the data you want by using the `--array` flag. Here is an example:
