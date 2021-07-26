@@ -52,7 +52,16 @@ def parse_json(json_input):
     # For complex JSON structure
     # Specifying the name of the array containing key data
     if args.array:
-        for item in json_input[args.array]:
+        #Converting supplied array path to a list
+        array_path = str(args.array).split(".")
+        # Iterating through the items in the list
+        # and taking the last item as our array name
+        for item in array_path:
+            json_input = json_input[item]
+
+        # Flatening the array and putting things
+        # together in a new dictionary
+        for item in json_input:
             i += 1
             updated_list = {}
             flatenned_item = flatten_json(item,updated_list)
