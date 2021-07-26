@@ -46,47 +46,48 @@ Jack | Mc'Donald | 26 | Fish and chips | 7 | Tennis, Basketball
 ### Complex JSON: ### 
 
 With complex JSON structure where you might have other arrays or data you don't want to put in the CSV, you can 
-specify the name of the array containing only the data you want by using the `--array` flag. Here is an example:
+specify the path to the array containing only the data you want by using the `--array` flag. Here is an example:
 ```
-py.exe .\json_to_csv.py --in .\file.json --out .\file.csv --array people
+py.exe .\json_to_csv.py --in .\file.json --out .\file.csv --array body.people
 ```
 ```
 {
-   "date":"21/10/2015",
-   "people":[
-      {
-         "name":"John",
-         "surname":"Doe",
-         "age":33,
-         "fav_things":{
-            "food":"Pizza",
-            "number":13,
-            "sport":"Football"
-         }
-      },
-      {
-         "name":"Jack",
-         "surname":"Mc'Donald",
-         "age":26,
-         "fav_things":{
-            "food":"Fish and chips",
-            "number":7,
-            "sport":[
-               "Tennis",
-               "Basketball"
-            ]
+   "body":{
+      "message":"Hello",
+      "people":[
+         {
+            "name":"John",
+            "surname":"Doe",
+            "age":33,
+            "fav_things":{
+               "food":"Pizza",
+               "number":13,
+               "sport":"Football"
+            }
          },
-         "pets":{
-            "dogs":{
-               "name":"Chappie"
+         {
+            "name":"Jack",
+            "surname":"Mc'Donald",
+            "age":26,
+            "fav_things":{
+               "food":"Fish and chips",
+               "number":7,
+               "sport":[
+                  "Tennis",
+                  "Basketball"
+               ]
             },
-            "cats":{
-               "name":"Marmalade"
+            "pets":{
+               "dogs":{
+                  "name":"Chappie"
+               },
+               "cats":{
+                  "name":"Marmalade"
+               }
             }
          }
-      }
-   ],
-   "api_version":"1.0.15",
+      ]
+   },
    "metadata":[
       {
          "date":"21/10/2015",
